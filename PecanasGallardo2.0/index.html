@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pecanas Gallardo – Frutos Secos Premium de Ica, Perú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="tel:+51973330141" class="top-bar-phone">
+        <i class="fa-solid fa-phone"></i> +51 973 330 141
+      </a>
+      <form class="top-bar-search" role="search">
+        <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <button type="submit" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <a href="#" class="top-bar-cart" id="cartLink">
+        <i class="fa-solid fa-cart-shopping"></i> Carrito
+        <span class="cart-count" id="cartCount">0</span> items
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" id="logoLink">
+        <img src="https://placehold.co/48x48/4A2E1B/FFFFFF?text=PG" alt="Pecanas Gallardo" class="logo-img">
+        <span class="logo-text">Pecanas <strong>Gallardo</strong></span>
+      </a>
+      <div class="header-actions">
+        <button class="auth-trigger" id="authBtn" aria-label="Mi cuenta">
+          <i class="fa-solid fa-user"></i> <span class="auth-trigger-text">Mi Cuenta</span>
+        </button>
+        <div class="user-badge" id="userBadge" style="display:none;">
+          <i class="fa-solid fa-circle-check"></i>
+          <span id="userDisplayName"></span>
+          <button class="btn-logout" id="btnLogout" title="Cerrar sesión"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+        <button class="nav-toggle" id="sidebarToggle" aria-label="Abrir menú de categorías">
+          <i class="fa-solid fa-bars"></i> Categorías
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TWO COLUMN LAYOUT -->
+  <div class="layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title"><i class="fa-solid fa-store"></i> Categorías</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active" data-category="welcome">
+          <i class="fa-solid fa-house"></i> Inicio
+        </a>
+        <!-- Las categorías se cargan dinámicamente desde la base de datos -->
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-contact">
+          <p><i class="fa-solid fa-phone"></i> +51 973 330 141</p>
+          <p><i class="fa-solid fa-location-dot"></i> Ica, Perú</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- OVERLAY (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- CONTENT PANEL -->
+    <main class="content-panel">
+
+      <!-- ===== WELCOME VIEW (default) ===== -->
+      <section class="view-welcome" id="viewWelcome">
+
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-text">
+            <span class="hero-badge"><i class="fa-solid fa-leaf"></i> 100% Natural</span>
+            <h1>Bienvenidos a <span class="text-accent">Pecanas Gallardo</span></h1>
+            <p>Frutos secos y alimentos naturales de primera calidad, directo desde los campos de Ica al hogar de todo el Perú.</p>
+          </div>
+          <div class="hero-image">
+            <img src="https://placehold.co/500x340/4A2E1B/FFFFFF?text=Pecanas+Gallardo" alt="Pecanas Gallardo">
+          </div>
+        </div>
+
+        <!-- Info Blocks -->
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Alimentos que Nutren</h3>
+            <p>Los frutos secos son una fuente excepcional de grasas saludables, proteínas vegetales, fibra, vitaminas y minerales esenciales para el funcionamiento óptimo del organismo.</p>
+          </div>
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Calidad Garantizada</h3>
+            <p>Cada producto pasa por estrictos controles de calidad. Sin conservantes, sin aditivos artificiales. Solo el sabor puro y natural que la tierra de Ica nos ofrece.</p>
+          </div>
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>Envío a Todo el Perú</h3>
+            <p>Realizamos envíos a nivel nacional con empaques especiales que garantizan la frescura y calidad de nuestros productos hasta tu puerta.</p>
+          </div>
+        </div>
+
+        <!-- Usos y Sugerencias -->
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Usos y Sugerencias</h2>
+          <p class="section-sub">Descubre las múltiples formas de disfrutar nuestros productos en tu día a día</p>
+        </div>
+
+        <div class="suggestions-grid">
+          <div class="suggestion-card">
+            <div class="suggestion-icon"><i class="fa-solid fa-cake-candles"></i></div>
+            <h4>Repostería</h4>
+            <p>Añade pecanas, almendras o nueces a tus tortas, galletas, brownies y panes artesanales para un toque crujiente y sabor inigualable.</p>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-icon"><i class="fa-solid fa-apple-whole"></i></div>
+            <h4>Snacks Diarios</h4>
+            <p>Un puñado de frutos secos mixtos es el snack perfecto: saludable, energético y delicioso. Ideal para la oficina, el gimnasio o el colegio.</p>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <h4>Desayunos Nutritivos</h4>
+            <p>Acompaña tus cereales, yogures o avenas con una generosa porción de frutos secos. Un comienzo de día lleno de energía y nutrientes.</p>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h4>Cocina y Ensaladas</h4>
+            <p>Pecanas tostadas sobre ensaladas, almendras en platos de pasta, nueces en salsas: eleva tus recetas con textura y sabor premium.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===== CATEGORY VIEW ===== -->
+      <section class="view-category" id="viewCategory" style="display:none;">
+
+        <div class="category-header">
+          <button class="btn-back" id="btnBack">
+            <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+          </button>
+          <nav aria-label="Migas de pan" class="breadcrumb">
+            <a href="#" class="breadcrumb-home" id="breadcrumbHome">Inicio</a>
+            <span class="sep">/</span>
+            <span class="current" id="breadcrumbCategory">Categoría</span>
+          </nav>
+        </div>
+
+        <div class="category-toolbar">
+          <h1 class="category-title" id="categoryTitle">Categoría</h1>
+          <div class="toolbar-controls">
+            <p class="result-count" id="resultCount">Mostrando 0 resultados</p>
+            <div class="sort-wrapper">
+              <label for="sortSelect" class="sr-only">Ordenar por</label>
+              <select id="sortSelect">
+                <option value="default">Ordenar por defecto</option>
+                <option value="price-asc">Precio: bajo a alto</option>
+                <option value="price-desc">Precio: alto a bajo</option>
+                <option value="name-asc">Nombre: A–Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Pecanas Gallardo</h4>
+        <p>Somos una empresa familiar dedicada a la producción y comercialización de frutos secos y alimentos naturales de primera calidad. Con más de 15 años de experiencia, llevamos el sabor natural de Ica a todo el Perú.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces de Interés</h4>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Guía de Envíos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> Calle La Mar 628, Ica, Perú</li>
+          <li><i class="fa-solid fa-phone"></i> +51 973 330 141</li>
+          <li><i class="fa-solid fa-envelope"></i> gallardo6097@hotmail.com</li>
+          <li><i class="fa-solid fa-clock"></i> Lun – Sáb: 8:00 a.m. – 6:00 p.m.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Pecanas Gallardo. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING -->
+  <div class="whatsapp-float-group">
+    <a href="https://wa.me/51973330141?text=Hola%2C%20deseo%20consultar%20por%20productos%20al%20por%20menor%20de%20Pecanas%20Gallardo"
+       class="whatsapp-float whatsapp-retail" target="_blank" rel="noopener noreferrer" title="Ventas por Menor">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-label">Ventas por Menor</span>
+    </a>
+    <a href="https://wa.me/51973330141?text=Hola%2C%20deseo%20consultar%20por%20pedidos%20al%20por%20mayor%20de%20Pecanas%20Gallardo"
+       class="whatsapp-float whatsapp-wholesale" target="_blank" rel="noopener noreferrer" title="Ventas por Mayor">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-label">Ventas por Mayor</span>
+    </a>
+  </div>
+
+  <!-- CART MODAL -->
+  <div class="cart-modal-overlay" id="cartModal" style="display:none;">
+    <div class="cart-modal-panel">
+      <div class="cart-modal-header">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Mi Carrito</h2>
+        <button class="cart-modal-close" id="cartModalClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="cart-modal-body" id="cartModalBody">
+        <div class="cart-empty">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p>Tu carrito esta vacio</p>
+        </div>
+      </div>
+      <div class="cart-modal-footer" id="cartModalFooter" style="display:none;">
+        <div class="cart-summary">
+          <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">S/ 0.00</span></div>
+          <div class="cart-summary-row cart-shipping"><span>Envio</span><span class="shipping-free">Gratis</span></div>
+          <div class="cart-summary-row cart-total"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
+        </div>
+        <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div class="auth-modal-overlay" id="authModal" style="display:none;">
+    <div class="auth-modal">
+      <button class="auth-modal-close" id="authModalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Iniciar Sesion</button>
+        <button class="auth-tab" data-tab="register">Registrarse</button>
+      </div>
+      <div class="auth-message" id="authMessage" style="display:none;"></div>
+      <!-- Login Form -->
+      <form class="auth-form" id="loginForm">
+        <div class="auth-field">
+          <label for="loginEmail"><i class="fa-solid fa-envelope"></i> Correo electronico</label>
+          <input type="email" id="loginEmail" required placeholder="tu@email.com">
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword"><i class="fa-solid fa-lock"></i> Contrasena</label>
+          <input type="password" id="loginPassword" required placeholder="Tu contrasena">
+        </div>
+        <button type="submit" class="btn-auth-submit"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesion</button>
+      </form>
+      <!-- Register Form -->
+      <form class="auth-form" id="registerForm" style="display:none;">
+        <div class="auth-field">
+          <label for="regName"><i class="fa-solid fa-user"></i> Nombre completo</label>
+          <input type="text" id="regName" required placeholder="Juan Perez">
+        </div>
+        <div class="auth-field">
+          <label for="regEmail"><i class="fa-solid fa-envelope"></i> Correo electronico</label>
+          <input type="email" id="regEmail" required placeholder="tu@email.com">
+        </div>
+        <div class="auth-field">
+          <label for="regPhone"><i class="fa-solid fa-phone"></i> Telefono</label>
+          <input type="tel" id="regPhone" placeholder="973 330 141">
+        </div>
+        <div class="auth-field">
+          <label for="regPassword"><i class="fa-solid fa-lock"></i> Contrasena</label>
+          <input type="password" id="regPassword" required minlength="6" placeholder="Minimo 6 caracteres">
+        </div>
+        <button type="submit" class="btn-auth-submit"><i class="fa-solid fa-user-plus"></i> Crear Cuenta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Supabase JS SDK (lectura de productos desde la nube) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Configuración + Datos locales de respaldo + Capa de base de datos + App -->
+  <script src="config.js"></script>
+  <script src="local-data.js"></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
